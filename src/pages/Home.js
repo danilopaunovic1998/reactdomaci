@@ -13,7 +13,13 @@ export default function Home(){
   
     const generate = async(param) =>{
       var data = await api.GET(param)
-      console.log(data)
+      await setDisplaySingle({
+        id : data.mal_id,
+        titleE : data.title_english,
+        titleJ : data.title_japanese,
+        episodes : data.episodes,
+        image : data.images.jpg.image_url
+      })
     }
     return (
         <div>
