@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function display() {
-  return (
-    <div>display</div>
+export default function Display({data}) {
+    return (
+    <div>
+        {data}
+    </div>
   )
 }
