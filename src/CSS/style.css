@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 .header{
     height: 100vr;
     width: 100%;
@@ -12,7 +13,7 @@
 
     border-bottom: 3px solid #3263aa;
     background: #080008;
-    position: relative;
+    
 }
 
 nav{
@@ -54,16 +55,20 @@ nav{
 .logo-image{
     width: 300px;
 }
+#blok1{
+    height: 100%;
+    background: #03afe3;
+}
 
 .side-menu{
     display: flex;
     align-items: top;
     justify-content: center;
-    position: fixed;
     padding-top: 3%;
     width: 25%;
-    height: 100%;
+    height: 720px;
     background-color: #080008;
+    float: left;
     vertical-align: middle;
 }
 .side-menu ul{
@@ -89,9 +94,68 @@ nav{
 }
 
 .side-menu ul li button:hover{
-    background-color: #380938;
+    background-color: #3263aa;
+    border-color: white;
+    color: white;
+    transition: 0.3s;
 }
 
 .side-menu ul li button:active{
     border-color: #380938;
 }
+
+.display-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding: 5px;
+    height: 720px;
+    width: 75%;
+    float: right;
+    background-image: url('../bg2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+ .display-div img{
+    margin: 7px;
+ }
+  .display-div h1, h2, h3{
+    margin-top: 15px;
+    color: #03afe3;
+  }
+  .display-div h1{
+    font-size: 25px;
+  }
+  .display-div h2{
+    font-size: 20px;
+  }
+  .display-div h3{
+    font-size: 15px;
+  }
+
+  .display-div button{
+    margin: 5px auto;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #008a2c;
+    border-color: #008a2c;
+    font-size: 25px;
+    color: white;
+  }
+  .display-div button:hover{
+    transition: 0.3s;
+  }
+  .inner-div{
+    margin: 30px auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.536);
+    width: 60%;
+  }
+  .inner-div img{
+    height: 270px;
+  }

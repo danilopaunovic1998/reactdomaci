@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 
-export default function Display({data}) {
-    return (
-    <div>
-        <h5>{data.id}</h5>
-        <h4>{data.titleE}</h4>
-        <h4>{data.titleJ}</h4>
-        <h4>{data.episodes}</h4>
+export default function Display({ data }) {
+  return (
+    <div class="display-div">
+      <div class="inner-div">
+        <h1>English title: {data.titleE === null ? "/" : data.titleE}</h1>
+        <h2>Japanese title: {data.titleJ === null ? "/" : data.titleJ}</h2>
+        <h3>Number of episodes: {data.episodes === null ? "/" : data.episodes}</h3>
         <img src={data.image}></img>
-        <button>Add to my WatchList</button>
+        <br></br>
+        <button id='addTo'>+</button>
+      </div>
     </div>
   )
+  
 }
