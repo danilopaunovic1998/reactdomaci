@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Sidemenu from '../components/Sidemenu';
 import Display from '../components/Display';
 import api from '../services/api';
+import "../CSS/style.css"
 export default function Home(){
     const [displaySingle, setDisplaySingle] = useState("Naruto")
 
@@ -13,7 +14,7 @@ export default function Home(){
   
     const generate = async(param) =>{
       var data = await api.GET(param)
-      await setDisplaySingle({
+       setDisplaySingle({
         id : data.mal_id,
         titleE : data.title_english,
         titleJ : data.title_japanese,

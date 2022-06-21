@@ -1,10 +1,16 @@
 import React from 'react'
 
-export default function Sidemenu({generate}) {
+export default function Sidemenu({ generate }) {
   return (
-    <div>
-        <button onClick={e=>{e.preventDefault(); generate("/recommendations/anime")}}>Recomend Anime</button>
-        <button>Recomend Manga</button>
+    <div class="side-menu">
+      <ul>
+        <li class="menu-item">
+          <button onClick={e => { e.preventDefault(); generate("/recommendations/anime") }}>Recomend Anime</button>
+        </li>
+        <li class="menu-item">
+          <button>Recomend Manga</button>
+        </li>
+      </ul>
     </div>
   )
 }

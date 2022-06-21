@@ -9,6 +9,8 @@
     height: 100vr;
     width: 100%;
     padding: 0 8%;
+
+    border-bottom: 3px solid #3263aa;
     background: #080008;
     position: relative;
 }
@@ -51,4 +53,45 @@ nav{
 }
 .logo-image{
     width: 300px;
+}
+
+.side-menu{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    position: fixed;
+    padding-top: 3%;
+    width: 25%;
+    height: 100%;
+    background-color: #080008;
+    vertical-align: middle;
+}
+.side-menu ul{
+    vertical-align: middle;
+    list-style: none;
+}
+.side-menu ul li {
+    vertical-align: middle;
+}
+.side-menu ul li button{
+    float: left;
+    padding: 20px 50px;
+    margin: 15% 10%;
+
+    background-color: #080008;
+    color: #03afe3;
+    font-size: large;
+
+    border-color: #3263aa;
+
+    
+
+}
+
+.side-menu ul li button:hover{
+    background-color: #380938;
+}
+
+.side-menu ul li button:active{
+    border-color: #380938;
 }
