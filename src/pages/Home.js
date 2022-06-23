@@ -5,7 +5,8 @@ import Sidemenu from '../components/Sidemenu';
 import Display from '../components/Display';
 import api from '../services/api';
 import "../CSS/style.css"
-export default function Home(){
+export default function Home({addToWatchList}){
+
     const [displaySingle, setDisplaySingle] = useState("Naruto")
 
     useEffect(() => {
@@ -59,7 +60,7 @@ export default function Home(){
     return (
         <div id="blok1">
             <Sidemenu generate={generateRandom} generateManga={generateRandomManga} />
-            <Display data={displaySingle} />
+            <Display data={displaySingle} addToWatchList = {addToWatchList} />
         </div>
     )
 }

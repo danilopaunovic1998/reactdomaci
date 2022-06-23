@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DisplayElement({ data }) {
+export default function DisplayElement({ data, addToWatchList }) {
     return (
         <div class="inner-div">
             <h1>English title: {data.titleE === null ? "/" : data.titleE}</h1>
@@ -8,7 +8,7 @@ export default function DisplayElement({ data }) {
             <h3>Number of episodes: {data.episodes === null ? "/" : data.episodes}</h3>
             <img src={data.image}></img>
             <br></br>
-            <button id='addTo'>+</button>   
+            <button id='addTo' onClick={e => {e.preventDefault(); addToWatchList(data.id)}}>+</button>   
         </div>
     )
 }
