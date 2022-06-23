@@ -148,6 +148,7 @@ nav{
     color: white;
   }
   .display-div button:hover{
+    background-color: #0edb4f;
     transition: 0.3s;
   }
   .inner-div{

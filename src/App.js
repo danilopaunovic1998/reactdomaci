@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
         <Router>
-        <Header />
+          <Header/>
           <Routes>
             <Route path={"/watchlist"} element = {<WatchList/>}/>
             <Route path={"/*"} element = {<Home/>}/>

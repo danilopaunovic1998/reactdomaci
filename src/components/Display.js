@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
+import DisplayElement from './DisplayElement'
 
 export default function Display({ data }) {
+  if(data == null || Array.isArray(data))
+  {
+    return( <div class="display-div">
+            </div>
+          )
+  }else{
   return (
     <div class="display-div">
-      <div class="inner-div">
-        <h1>English title: {data.titleE === null ? "/" : data.titleE}</h1>
-        <h2>Japanese title: {data.titleJ === null ? "/" : data.titleJ}</h2>
-        <h3>Number of episodes: {data.episodes === null ? "/" : data.episodes}</h3>
-        <img src={data.image}></img>
-        <br></br>
-        <button id='addTo'>+</button>
-      </div>
+        <DisplayElement data = {data}/>
     </div>
-  )
+  )}
   
 }
