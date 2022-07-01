@@ -5,11 +5,11 @@ import Sidemenu from '../components/Sidemenu'
 //document.getElementById('recommendButton').disabled = true
 const emptyFunction = () => void undefined
 
-export default function WatchList() {
+export default function WatchList({data}) {
   return (
-    <div>
+    <div className="WatchList">
       <Sidemenu generate= {emptyFunction} generateManga={emptyFunction}/>
-      <Display />
+      <Display data = {data} addToWatchList={emptyFunction}/>
     </div>
   )
 }

@@ -58,7 +58,7 @@ export default function Home({addToWatchList}){
       })
     }
     return (
-        <div id="blok1">
+        <div id="blok1" className='Home'>
             <Sidemenu generate={generateRandom} generateManga={generateRandomManga} />
             <Display data={displaySingle} addToWatchList = {addToWatchList} />
         </div>

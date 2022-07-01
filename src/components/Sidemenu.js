@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Sidemenu({ generate, generateManga }) {
   return (
-    <div class="side-menu">
+    <div className="side-menu">
       <ul>
         <li class="menu-item">
           <button id='recommendButton' onClick={e => { e.preventDefault(); generate("/recommendations/anime") }}>Recomend Anime</button>

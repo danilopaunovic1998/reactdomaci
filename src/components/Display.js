@@ -1,17 +1,32 @@
 import React, { useState } from 'react'
+import { useEffect } from 'react';
 import DisplayElement from './DisplayElement'
+import api from '../services/api';
+import WatchListElement from './WatchListElement';
 
-export default function Display({ data, addToWatchList}) {
-  if(data == null || Array.isArray(data))
-  {
-    return( <div class="display-div">
-            </div>
-          )
-  }else{
+export default function Display({ data, addToWatchList }) {
+  const [watchlist, setWatchlist] = useState([])
+  useEffect(() => {
+     if (data != null && Array.isArray(data)) 
+      setWatchlist(data.map((anime) => (<WatchListElement data={anime}/>)))
+   }, [])
+
   return (
-    <div class="display-div">
-        <DisplayElement data = {data} addToWatchList = {addToWatchList}/>
+    <div>
+      {
+        data === null ?
+          <div className="display-div">
+            <span> Nista nije dodato u Watch List-u </span>
+          </div>
+          : Array.isArray(data) ?
+            React.createElement("div", { className: "display-div watch-list-display" 
+          }, watchlist)
+          : <div className="display-div">
+              <DisplayElement data={data} addToWatchList={addToWatchList} />
+          </div>
+
+      }
     </div>
-  )}
-  
+  );
+
 }
