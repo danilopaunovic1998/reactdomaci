@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import DisplayElement from './DisplayElement'
-import api from '../services/api';
 import WatchListElement from './WatchListElement';
 
 export default function Display({ data, addToWatchList }) {
